@@ -1,0 +1,204 @@
+/* === Reset i baza === */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #111;
+  color: #eee;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* === Komponenty wspólne === */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title,
+.section-title {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.intro {
+  text-align: center;
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #87CEEB;
+  color: #000;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #6dbdd5;
+}
+
+.page-footer {
+  background-color: #000;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* === Tła dynamiczne === */
+.background-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  z-index: -10;
+  pointer-events: none;
+}
+
+#bg1 { z-index: -10; }
+#bg2 { z-index: -11; }
+
+/* === Sekcja Usługi === */
+#services {
+  background-color: rgba(26, 26, 26, 0.8);
+  color: #ddd;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+#services ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+#services li {
+  background-color: #222;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s;
+}
+
+#services li:hover {
+  background-color: #2d2d2d;
+}
+
+#services li a {
+  color: #b1b2b2;
+  text-decoration: none;
+}
+
+#services li a:hover {
+  text-decoration: underline;
+}
+
+/* === Portfolio (3 kolumny) === */
+.portfolio .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #ccc;
+  text-align: center;
+}
+
+/* === Formularz kontaktowy – estetyczny z nagłówkiem i wstępem === */
+.contact-form form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 0.6rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #222;
+  color: #eee;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #87CEEB;
+  background-color: #1a1a1a;
+}
+
+.contact-form button {
+  padding: 1rem;
+  background-color: #87CEEB;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #6dbdd5;
+}
+
+/* === Sekcja formularza z dodatkowym wstępem === */
+#contact-form .section-title:first-of-type {
+  margin-top: 0;
+}
+
+#contact-form p {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  color: #ccc;
+}
