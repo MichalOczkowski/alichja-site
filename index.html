@@ -93,23 +93,50 @@
       </div>
     </section>
 
+    <!-- ZAMIANA SEKCJI kontaktowej index.html -->
     <section id="contact-form" class="contact-form fade-in section-dark">
-      <div class="container">
-        <h2 class="section-title">Gotowy/a na swój tatuaż?</h2>
-        <p class="section-title">Jeśli coś w Tobie mówi, że to ten moment – odezwij się. Możemy porozmawiać o pomyśle, poprawce, zakryciu... albo po prostu o tym, co czujesz.</p>
-        <h2 class="section-title">Napisz wiadomość</h2>
-        <form action="#" method="post">
-          <label for="name">Imię</label>
-          <input type="text" id="name" name="name" required aria-required="true" placeholder="Twoje imię" />
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required aria-required="true" placeholder="Twój adres e-mail" />
-          <label for="message">Wiadomość</label>
-          <textarea id="message" name="message" rows="5" required aria-required="true" placeholder="Napisz coś..."></textarea>
-          <button type="submit">Wyślij</button>
-        </form>
+    <div class="container">
+      <h2 class="section-title">Gotowy/a na swój tatuaż?</h2>
+      <p class="section-title">Jeśli coś w Tobie mówi, że to ten moment – odezwij się. Możemy porozmawiać o pomyśle, poprawce, zakryciu... albo po prostu o tym, co czujesz.</p>
+      <h2 class="section-title">Napisz wiadomość</h2>
+
+    <form action="https://formsubmit.co/oczkowski.mich@gmail.com" method="POST" id="kontakt-formularz">
+      <label for="name">Imię</label>
+      <input type="text" id="name" name="name" required placeholder="Twoje imię">
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required placeholder="Twój adres e-mail">
+
+      <label for="phone">Telefon (opcjonalnie)</label>
+      <input type="tel" id="phone" name="phone" placeholder="Twój numer telefonu">
+
+      <div class="consents">
+        <label><input type="checkbox" id="zgoda1" required> Wyrażam zgodę na przetwarzanie moich danych osobowych w celu kontaktu i obsłużenia zapytania/wiadomości.</label>
+        <label><input type="checkbox" id="zgoda2" required> Wyrażam zgodę na to, żebyś się zwrotnie ze mną kontaktowała.</label>
+        <label><input type="checkbox" id="zgoda3"> Wyrażam zgodę na otrzymywanie od Ciebie wszystkich informacji jakie chciałabyś mi przekazać w przyszłości, np. Zmiany, Promocje, Eventy, Ciekawostki.</label>
       </div>
-    </section>
-  </main>
+
+      <label for="user-message">Wiadomość jaka będzie wysłana:</label>
+      <div class="message-wrapper">
+        <textarea id="summary" readonly></textarea>
+        <textarea id="user-message" rows="5" placeholder="Napisz coś..." required></textarea>
+      </div>
+
+      <!-- To pole jest wysyłane do Formsubmit -->
+      <textarea name="message" id="final-message" style="display:none;"></textarea>
+
+<input type="hidden" name="_next" value="http://127.0.0.1:5500/dziekuje.html">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="Nowa wiadomość ze strony Alichja">
+<input type="hidden" name="_template" value="table">
+
+      <button type="submit">Wyślij</button>
+    </form>
+  </div>
+</section>
+
+
+</main>
 
   <footer class="page-footer">
     <div class="container">
@@ -118,5 +145,6 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/kontakt.js" defer></script>
 </body>
 </html>
