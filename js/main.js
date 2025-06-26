@@ -49,17 +49,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+const basePath = window.location.pathname.includes('/faq/') ||
+                 window.location.pathname.includes('/blog/') ||
+                 window.location.pathname.includes('/historia/') ? '../' : '';
+
 const backgrounds = [
-  '../images/back/1.jpg',
-  '../images/back/2.jpg',
-  '../images/back/3.jpg',
-  '../images/back/4.jpg',
-  '../images/back/5.jpg',
-  '../images/back/6.jpg',
-  '../images/back/7.jpg',
-  '../images/back/8.jpg',
-  '../images/back/9.jpg',
-  '../images/back/10.jpg',
+  `${basePath}images/back/1.jpg`,
+  `${basePath}images/back/2.jpg`,
+  `${basePath}images/back/3.jpg`,
+  `${basePath}images/back/4.jpg`,
+  `${basePath}images/back/5.jpg`,
+  `${basePath}images/back/6.jpg`,
+  `${basePath}images/back/7.jpg`,
+  `${basePath}images/back/8.jpg`,
+  `${basePath}images/back/9.jpg`,
+  `${basePath}images/back/10.jpg`,
 ];
 
 let showingBg1 = true;
