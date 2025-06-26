@@ -66,6 +66,7 @@ const backgrounds = [
   `${basePath}images/back/10.jpg`,
 ];
 
+let current = 0;
 let showingBg1 = true;
 
 function preloadImages(paths) {
@@ -107,6 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById('bg1')) {
     document.getElementById('bg1').style.backgroundImage = `url('${backgrounds[0]}')`;
     document.getElementById('bg1').style.opacity = "1";
-    setInterval(swapBackground, 30000);
+    setInterval(swapBackground, 10000);
   }
 });
