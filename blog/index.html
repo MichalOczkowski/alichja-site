@@ -7,6 +7,7 @@
   <meta name="description" content="Blog Alichji – przemyślenia, historie klientów, tatuaż jako proces i sztuka." />
   <link rel="stylesheet" href="../css/shared.css" />
   <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/lightbox/lightbox.min.css" />
 </head>
 <body class="blog-page">
   <div class="background-fixed" id="bg1"></div>
@@ -33,20 +34,39 @@
 
       <section class="blog-s1">
         <h2 class="section-title">Najnowsze wpisy</h2>
-        <ul class="faq-list">
-          <li>
-            <strong><a href="#">Tatuaż a początek nowego etapu</a></strong>
-            <div>Dlaczego niektórzy decydują się na tatuaż, gdy coś się kończy – i zaczyna nowe.</div>
-          </li>
-          <li>
-            <strong><a href="#">Cisza w studiu</a></strong>
-            <div>Nie każdy lubi small talk. O szacunku do przestrzeni i emocji w trakcie sesji.</div>
-          </li>
-          <li>
-            <strong><a href="#">Nieidealna skóra – idealne podejście</a></strong>
-            <div>Rozstępy, blizny, asymetrie – i jak je traktować z uważnością, nie jako problem.</div>
-          </li>
-        </ul>
+
+<ul class="blog-list">
+  <li class="blog-entry">
+    <a href="../images/blog/1.jpg" data-lightbox="blog" data-title="Tatuaż a początek nowego etapu">
+      <img src="../images/blog/1.jpg" alt="Tatuaż – początek nowego etapu" class="blog-image">
+    </a>
+    <div class="blog-content">
+      <strong><a href="#">Tatuaż a początek nowego etapu</a></strong>
+      <p>Dlaczego niektórzy decydują się na tatuaż, gdy coś się kończy – i zaczyna nowe. To często forma symbolicznego zamknięcia jednego rozdziału i otwarcia kolejnego. Tatuaż może być kotwicą emocjonalną albo czystą ekspresją.</p>
+    </div>
+  </li>
+
+  <li class="blog-entry">
+    <a href="../images/blog/2.jpg" data-lightbox="blog" data-title="Cisza w studiu">
+      <img src="../images/blog/2.jpg" alt="Cisza w studiu" class="blog-image">
+    </a>
+    <div class="blog-content">
+      <strong><a href="#">Cisza w studiu</a></strong>
+      <p>Nie każdy lubi small talk. O szacunku do przestrzeni i emocji w trakcie sesji. Niektórzy klienci potrzebują ciszy, żeby skoncentrować się na przeżyciu – i warto to uszanować.</p>
+    </div>
+  </li>
+
+  <li class="blog-entry">
+    <a href="../images/blog/3.jpg" data-lightbox="blog" data-title="Nieidealna skóra – idealne podejście">
+      <img src="../images/blog/3.jpg" alt="Nieidealna skóra – idealne podejście" class="blog-image">
+    </a>
+    <div class="blog-content">
+      <strong><a href="#">Nieidealna skóra – idealne podejście</a></strong>
+      <p>Rozstępy, blizny, asymetrie – i jak je traktować z uważnością, nie jako problem. Ciało to nie płótno idealne, tylko żywa tkanka z historią. I właśnie z nią można tworzyć piękne rzeczy.</p>
+    </div>
+  </li>
+</ul>
+
       </section>
     </div>
   </main>
@@ -58,5 +78,7 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script src="../js/jquery/jquery.min.js"></script>
+  <script src="../js/lightbox/lightbox.min.js"></script>
 </body>
 </html>

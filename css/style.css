@@ -199,6 +199,64 @@ main {
   font-size: 0.95rem;
 }
 
+.blog-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.blog-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blog-entry {
+  display: flow-root;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.blog-image {
+  float: left;
+  width: 16.666%;
+  height: auto;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+  object-fit: contain;
+}
+
+.blog-content a {
+  color: #87CEEB;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.blog-content a:hover {
+  text-decoration: underline;
+}
+
+.blog-content p {
+  margin-top: 0.5rem;
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
 /* === Animacje === */
 .fade-in {
   opacity: 0;
