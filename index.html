@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alichja.ink – Tatuaż Artystyczny</title>
+  <meta name="description" content="Portfolio i oferta artystki tatuażu Alichji – cover-upy, poprawki, projekty autorskie. Bez pozerki." />
+  <link rel="icon" href="https://placehold.co/32x32" type="image/png" />
+  <link rel="stylesheet" href="css/shared.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="background-fixed" id="bg1"></div>
+  <div class="background-fixed" id="bg2"></div>
+  <header class="main-nav">
+    <nav aria-label="Główna nawigacja">
+    <ul>
+        <li><a href="#hero">Główna</a></li>
+        <li><a href="#projects">Przykładowe projekty</a></li>
+        <li><a href="#why-alichja">Dlaczego Alichja?</a></li>
+        <li><a href="#mini-faq">FAQ</a></li>
+        <li><a href="#contact-form">Kontakt</a></li>
+        <li><a href="blog/index.html">Blog</a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero fade-in section-dark" id="hero">
+      <div class="container hero-overlay">
+        <h2>Alichja.ink<br />Tatuaż to Twoja opowieść<br />Ja mogę przełożyć ją na obraz</h2>
+      </div>
+    </section>
+
+    <section id="projects" class="portfolio fade-in section-dark">
+      <div class="container">
+        <h2 class="section-title">Przykładowe projekty</h2>
+        <p>Wybrane prace Alichji – nowe projekty, poprawki, cover-upy. Różne style, jeden poziom jakości.</p>
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="https://placehold.co/400x400/222222/eeeeee?text=Cover-up+1" alt="Zakrycie starego tatuażu realistycznym wzorem" />
+            <p>Cover-up: zakrycie starego wzoru</p>
+          </div>
+          <div class="gallery-item">
+            <img src="https://placehold.co/400x400/333333/eeeeee?text=Nowy+projekt" alt="Nowy tatuaż – autorski projekt" />
+            <p>Nowy tatuaż – autorski projekt</p>
+          </div>
+          <div class="gallery-item">
+            <img src="https://placehold.co/400x400/444444/eeeeee?text=Poprawka" alt="Korekta kolorów i konturów istniejącego tatuażu" />
+            <p>Poprawka – korekta kolorów i konturów</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-alichja" class="fade-in section-dark">
+      <div class="container">
+        <h2 class="section-title">Dlaczego Alichja?</h2>
+        <p class="intro-centered">Cover-upy, poprawki, projekty od zera. Dla początkujących i zaawansowanych. Bez pozerki.</p>
+        <p class="intro">Bo nie chodzi tylko o tusz. Chodzi o rozmowę, uważność i opowieść, którą zapisujesz na skórze.</p>
+        <ul class="why-list">
+          <li>Indywidualne podejście do każdej osoby – niezależnie od tego, czy to Twój pierwszy tatuaż, czy kolejny krok.</li>
+          <li>Doświadczenie w poprawianiu i zakrywaniu starych wzorów – bez oceniania, z szacunkiem.</li>
+          <li>Cisza, skupienie, współpraca. Nie lubisz small talku? Nie musisz. Chcesz pogadać? Też dobrze.</li>
+          <li>To miejsce dla tych, którzy czują, że tatuaż to coś więcej niż ozdoba.</li>
+        </ul>
+        <a href="historia/index.html" class="btn">Przeczytaj więcej o Alichji</a>
+      </div>
+    </section>
+
+    <section id="mini-faq" class="fade-in section-dark">
+      <div class="container">
+        <h2 class="section-title">Najczęstsze pytania</h2>
+        <ul class="faq-list">
+          <li>
+            <strong>Czy poprawiasz cudze tatuaże?</strong>
+            <div>Tak – bez oceniania. Z szacunkiem i doświadczeniem, często poprawiam lub zakrywam stare prace.</div>
+          </li>
+          <li>
+            <strong>Co jeśli to mój pierwszy tatuaż i się stresuję?</strong>
+            <div>Nie musisz wiedzieć wszystkiego. Rozmowa przed i atmosfera pracy pomagają Ci się poczuć bezpiecznie.</div>
+          </li>
+          <li>
+            <strong>Czy mogę przyjść z gotowym wzorem?</strong>
+            <div>Tak. Wspólnie decydujemy, czy to dobry wybór. Czasem lekko go modyfikuję, żeby pasował do Ciebie.</div>
+          </li>
+          <li>
+            <strong>Czy pracujesz w ciszy?</strong>
+            <div>Jeśli chcesz. Nie narzucam rozmowy. Jeśli milczysz – to okej. Jeśli chcesz pogadać – też dobrze.</div>
+          </li>
+        </ul>
+        <a href="faq/index.html" class="btn">Zobacz wszystkie pytania</a>
+      </div>
+    </section>
+
+    <!-- ZAMIANA SEKCJI kontaktowej index.html -->
+    <section id="contact-form" class="contact-form fade-in section-dark">
+    <div class="container">
+      <h2 class="section-title">Gotowy/a na swój tatuaż?</h2>
+      <p class="section-title">Jeśli coś w Tobie mówi, że to ten moment – odezwij się. Możemy porozmawiać o pomyśle, poprawce, zakryciu... albo po prostu o tym, co czujesz.</p>
+      <h2 class="section-title">Napisz wiadomość</h2>
+
+    <form action="https://formsubmit.co/oczkowski.mich@gmail.com" method="POST" id="kontakt-formularz">
+      <label for="name">Imię</label>
+      <input type="text" id="name" name="name" required placeholder="Twoje imię">
+
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" required placeholder="Twój adres e-mail">
+
+      <label for="phone">Telefon (opcjonalnie)</label>
+      <input type="tel" id="phone" name="phone" placeholder="Twój numer telefonu">
+
+      <div class="consents">
+        <label><input type="checkbox" id="zgoda1" required> Wyrażam zgodę na przetwarzanie moich danych osobowych w celu kontaktu i obsłużenia zapytania/wiadomości.</label>
+        <label><input type="checkbox" id="zgoda2" required> Wyrażam zgodę na to, żebyś się zwrotnie ze mną kontaktowała.</label>
+        <label><input type="checkbox" id="zgoda3"> Wyrażam zgodę na otrzymywanie od Ciebie wszystkich informacji jakie chciałabyś mi przekazać w przyszłości, np. Zmiany, Promocje, Eventy, Ciekawostki.</label>
+      </div>
+
+      <label for="user-message">Wiadomość jaka będzie wysłana:</label>
+      <div class="message-wrapper">
+        <textarea id="summary" readonly></textarea>
+        <textarea id="user-message" rows="5" placeholder="Napisz coś..." required></textarea>
+      </div>
+
+      <!-- To pole jest wysyłane do Formsubmit -->
+      <textarea name="message" id="final-message" style="display:none;"></textarea>
+
+<input type="hidden" name="_next" value="http://127.0.0.1:5500/dziekuje.html">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="Nowa wiadomość ze strony Alichja">
+<input type="hidden" name="_template" value="table">
+
+      <button type="submit">Wyślij</button>
+    </form>
+  </div>
+</section>
+
+
+</main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <p>© 2025 Alichja. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/kontakt.js" defer></script>
+</body>
+</html>
