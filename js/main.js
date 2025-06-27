@@ -101,11 +101,11 @@ function swapBackground() {
   if (showingBg1) {
     bg2.style.backgroundImage = `url('${nextBg}')`;
     bg2.style.opacity = "0.8";
-    bg1.style.opacity = "0.6";
+    bg1.style.opacity = "0";
   } else {
     bg1.style.backgroundImage = `url('${nextBg}')`;
     bg1.style.opacity = "0.8";
-    bg2.style.opacity = "0.6";
+    bg2.style.opacity = "0";
   }
   showingBg1 = !showingBg1;
 }
@@ -113,9 +113,10 @@ function swapBackground() {
 preloadImages(backgrounds);
 
 document.addEventListener("DOMContentLoaded", () => {
-  if (document.getElementById('bg1')) {
+  if (document.getElementById('bg1') && document.getElementById('bg2')) {
     document.getElementById('bg1').style.backgroundImage = `url('${backgrounds[0]}')`;
     document.getElementById('bg1').style.opacity = "0.8";
+    document.getElementById('bg2').style.opacity = "0";
     setInterval(swapBackground, 20000);
   }
 });
