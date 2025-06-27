@@ -378,3 +378,42 @@ body::before {
   border-color: #444;
   background-color: #222;
 }
+
+.gallery-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.gallery-flex .gallery-item {
+  flex: 1 1 280px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gallery-flex .gallery-thumbnail {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s;
+}
+
+.gallery-flex .gallery-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.gallery-flex .gallery-item p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.gallery-page .gallery-wrapper {
+  margin-top: 3rem; /* zwiększony odstęp */
+}
