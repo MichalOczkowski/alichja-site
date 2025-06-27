@@ -1,5 +1,17 @@
-// kontakt.js – wersja z polem readonly + user input + scalanie
+// ============================================================
+// kontakt.js – obsługa formularza kontaktowego
+//
+// Opis kluczowych funkcji:
+// - Obsługa podglądu i walidacji wiadomości
+// - Przekazywanie danych do Formsubmit
+//
+// Zmiana logiki wpływa na działanie formularza kontaktowego na stronie.
+// ============================================================
 
+// kontakt.js – obsługa formularza kontaktowego z podsumowaniem i walidacją
+
+
+// Pobranie referencji do pól formularza
 const form = document.getElementById("kontakt-formularz");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
@@ -11,6 +23,8 @@ const summary = document.getElementById("summary");
 const userMessage = document.getElementById("user-message");
 const finalMessage = document.getElementById("final-message");
 
+
+// Aktualizuje podsumowanie na podstawie pól formularza
 function updateSummary() {
   let lines = [];
   if (nameInput.value.trim()) lines.push(`Jestem ${nameInput.value.trim()}.`);
@@ -30,10 +44,14 @@ function updateSummary() {
   updateFinalMessage();
 }
 
+
+// Łączy podsumowanie i wiadomość użytkownika do pola finalMessage
 function updateFinalMessage() {
   finalMessage.value = summary.value + "\n\n" + userMessage.value;
 }
 
+
+// Obsługa zdarzeń formularza i pól
 [nameInput, emailInput, phoneInput, zgoda1, zgoda2, zgoda3].forEach(input => {
   input.addEventListener("input", updateSummary);
   input.addEventListener("change", updateSummary);
@@ -50,9 +68,10 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-// Inicjalizacja
+// Inicjalizacja podsumowania po załadowaniu strony
 updateSummary();
 
+// Ułatwienie: kliknięcie w message-wrapper ustawia focus na polu wiadomości
 document.querySelector(".message-wrapper").addEventListener("click", () => {
   userMessage.focus();
 });

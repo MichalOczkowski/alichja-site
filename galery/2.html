@@ -1,3 +1,17 @@
+<!-- ============================================================
+  galery/2.html – galeria projektu 2
+
+  Opis sekcji i klas:
+  - .background-fixed – warstwa tła dynamicznego (zmieniana przez JS)
+  - .section-dark – ciemne, półprzezroczyste tło sekcji/kontenera
+  - .default-container – główny kontener sekcji
+  - .nav-main – główna nawigacja
+  - .default-btn – przycisk akcji
+  - .gallery-flex, .gallery-item, .gallery-thumbnail – układ galerii
+  - .fade-in – animacja pojawiania się sekcji
+  - Bloki body.[nazwa-strony] ... – ustawienia przeźroczystości tła i kontenerów
+  Zmiana klas i sekcji wpływa na wygląd i czytelność treści.
+============================================================ -->
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -13,7 +27,8 @@
   <div class="background-fixed" id="bg1"></div>
   <div class="background-fixed" id="bg2"></div>
 
-  <header class="main-nav">
+  <!-- === Nawigacja główna === -->
+  <header class="nav-main">
     <nav aria-label="Główna nawigacja">
       <ul>
         <li><a href="../index.html#hero">Główna</a></li>
@@ -26,37 +41,46 @@
     </nav>
   </header>
 
+  <!-- === Główna treść strony === -->
   <main class="section-dark fade-in">
-    <div class="container">
-      <h1 class="page-title">Galeria projektu 2</h1>
+    <div class="default-container">
+      <h1 class="default-page-title">Galeria projektu 2</h1>
       <p class="intro">Przykładowe zdjęcia tatuażu geometrycznego – detale i proces wykonania.</p>
-      <a href="../index.html#projects" class="btn">← Wróć na stronę główną</a>
+      <a href="../index.html#projects" class="default-btn">← Wróć na stronę główną</a>
 
+      <!-- Galeria zdjęć -->
       <div class="gallery-wrapper gallery-flex">
+        <!-- PUBLI:gallery-photo-START -->
         <div class="gallery-item">
           <a href="../images/front/galery/2-1.jpg" data-lightbox="project2">
             <img src="../images/front/galery/2-1.jpg" alt="Zdjęcie 1" class="gallery-thumbnail">
           </a>
           <p>Zdjęcie 1 – szkic koncepcyjny</p>
         </div>
+        <!-- PUBLI:gallery-photo-END -->
+        <!-- PUBLI:gallery-photo-START -->
         <div class="gallery-item">
           <a href="../images/front/galery/2-2.jpg" data-lightbox="project2">
             <img src="../images/front/galery/2-2.jpg" alt="Zdjęcie 2" class="gallery-thumbnail">
           </a>
           <p>Zdjęcie 2 – w trakcie konturowania</p>
         </div>
+        <!-- PUBLI:gallery-photo-END -->
+        <!-- PUBLI:gallery-photo-START -->
         <div class="gallery-item">
           <a href="../images/front/galery/2-3.jpg" data-lightbox="project2">
             <img src="../images/front/galery/2-3.jpg" alt="Zdjęcie 3" class="gallery-thumbnail">
           </a>
           <p>Zdjęcie 3 – gotowy efekt</p>
         </div>
+        <!-- PUBLI:gallery-photo-END -->
       </div>
     </div>
   </main>
 
+  <!-- === Stopka strony === -->
   <footer class="page-footer">
-    <div class="container">
+    <div class="default-container">
       <p>© 2025 Alichja. Wszelkie prawa zastrzeżone.</p>
     </div>
   </footer>

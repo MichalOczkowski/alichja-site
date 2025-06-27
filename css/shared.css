@@ -10,10 +10,15 @@ html {
 body {
   margin: 0;
   font-family: 'Helvetica Neue', sans-serif;
+  /* Usunięcie tła na podstronach galerii, by nie przykrywać dynamicznego tła JS */
   background-color: #111;
   color: #eee;
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+body.gallery-page {
+  background-color: transparent !important;
 }
 
 /* === Komponenty wspólne === */
@@ -211,16 +216,19 @@ body.blog-page .container {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-body.historia-page .container {
+body.historia-page .default-container {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-body.dziekuje-page .container {
+body.dziekuje-page .default-container {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+body.gallery-page .default-container {
+  background-color: rgba(0, 0, 0, 0.4); /* przezroczystość jak na stronie głównej */
+}
 
-<!-- Styl CSS do shared.css – precyzyjny dla galerii projektu (unikamy konfliktów z .portfolio .gallery) -->
+/* Styl CSS do shared.css – precyzyjny dla galerii projektu (unikamy konfliktów z .portfolio .gallery) */
 .gallery-page .gallery-wrapper {
   display: flex;
   flex-wrap: wrap;

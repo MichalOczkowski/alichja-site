@@ -1,28 +1,88 @@
+/*
+============================================================
+  style.css – główny arkusz stylów serwisu Alichja
+
+  Opis kluczowych klas i sekcji:
+  - .background-fixed – warstwa tła dynamicznego (zmieniana przez JS)
+  - .section-dark – ciemne, półprzezroczyste tło sekcji/kontenera (okno na treść)
+  - .default-container – główny kontener sekcji, ogranicza szerokość i dodaje padding
+  - .default-section-title, .default-page-title – standaryzowane tytuły sekcji i stron
+  - .nav-main – główna nawigacja (menu)
+  - .default-btn – przycisk akcji
+  - .gallery-flex, .gallery-item, .gallery-thumbnail – układ i styl galerii zdjęć
+  - .fade-in – animacja pojawiania się sekcji przy przewijaniu
+  - Bloki body.[nazwa-strony] ... – ustawienia przeźroczystości tła i kontenerów dla każdej podstrony
+
+  Zmiana wartości w blokach body.[nazwa-strony] .background-fixed lub .section-dark
+  wpływa na widoczność tła i czytelność treści na danej podstronie.
+============================================================
+*/
+/* === PRZEŹROCZYSTOŚĆ TŁA I KONTENERÓW DLA KAŻDEJ STRONY === */
+
+
+/* STRONA GŁÓWNA */
+body.home-page .background-fixed { opacity: 0.6; }
+body.home-page .section-dark, body.home-page main, body.home-page .default-container { background-color: rgba(0,0,0,0.4); }
+
+/* GALERIA */
+body.gallery-page .background-fixed { opacity: 0.6; }
+body.gallery-page .section-dark, body.gallery-page main, body.gallery-page .default-container { background-color: rgba(0,0,0,0.4); }
+
+/* FAQ */
+body.faq-page .background-fixed { opacity: 0.5; }
+body.faq-page .section-dark, body.faq-page main, body.faq-page .default-container { background-color: rgba(0,0,0,0.4); }
+
+/* BLOG */
+body.blog-page .background-fixed { opacity: 0.6; }
+body.blog-page .section-dark, body.blog-page main, body.blog-page .default-container { background-color: rgba(0,0,0,0.6); }
+
+/* HISTORIA */
+body.historia-page .background-fixed { opacity: 0.5; }
+body.historia-page .section-dark, body.historia-page main, body.historia-page .default-container { background-color: rgba(0,0,0,0.4); }
+
+/* DZIEKUJE */
+body.dziekuje-page .background-fixed { opacity: 0.5; }
+body.dziekuje-page .section-dark, body.dziekuje-page main, body.dziekuje-page .default-container { background-color: rgba(0,0,0,0.4); }
+
+/* === KONIEC BLOKÓW PRZEŹROCZYSTOŚCI === */
 /* === Sekcje główne === */
 main {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem 0;
 }
 
 .section-dark {
+  /* Uwaga: przezroczystość tła zmniejszona, by dynamiczne tło galerii było widoczne */
   background-color: rgba(0, 0, 0, 0.6);
   color: #ddd;
   padding: 4rem 2rem;
 }
 
-.container {
+
+/* === Kontener domyślny (standaryzowany) === */
+.default-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-.section-title {
+/* === Tytuły sekcji i stron (standaryzowane) === */
+.default-section-title {
   text-align: center;
   margin: 2rem 0;
 }
 
+.default-page-title {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+  font-size: 2.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
 /* === Nawigacja === */
-.main-nav {
+/* === Nawigacja główna (standaryzowana) === */
+.nav-main {
   position: sticky;
   top: 0;
   background: #000;
@@ -31,7 +91,7 @@ main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-.main-nav ul {
+.nav-main ul {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -40,17 +100,37 @@ main {
   padding: 0;
 }
 
-.main-nav a {
+.nav-main a {
   color: #eee;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
+.nav-main a:hover,
+.nav-main a.active {
   color: #87CEEB;
   border-bottom: 2px solid #87CEEB;
+}
+/* === Przycisk domyślny (standaryzowany) === */
+.default-btn {
+  padding: 1rem 2.2rem;
+  background-color: #87CEEB;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.default-btn:hover {
+  background-color: #6dbdd5;
+  color: #fff;
 }
 
 /* === Sekcja Hero === */
@@ -271,6 +351,12 @@ main {
 
 /* === Tło === */
 body::before {
+  /* Usunięcie domyślnego tła na podstronach galerii, by nie przykrywało dynamicznego tła JS */
+  content: "";
+  display: none;
+}
+
+body:not(.gallery-page)::before {
   content: "";
   position: fixed;
   top: 0;
@@ -282,7 +368,7 @@ body::before {
   background-position: center;
   background-repeat: no-repeat;
   z-index: -1;
-  opacity: 0.2;
+  opacity: 0.0;
 }
 
 .message-wrapper {
@@ -416,4 +502,8 @@ body::before {
 
 .gallery-page .gallery-wrapper {
   margin-top: 3rem; /* zwiększony odstęp */
+}
+
+body.gallery-page .section-dark {
+  background-color: rgba(0, 0, 0, 0.6);
 }
