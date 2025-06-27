@@ -117,6 +117,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('bg1').style.backgroundImage = `url('${backgrounds[0]}')`;
     document.getElementById('bg1').style.opacity = "0.8";
     document.getElementById('bg2').style.opacity = "0";
-    setInterval(swapBackground, 20000);
+    setInterval(swapBackground, 10000);
   }
 });
