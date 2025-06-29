@@ -1,0 +1,43 @@
+<!-- ============================================================
+  dziekuje.html – strona podziękowania
+
+  Opis sekcji i klas:
+  - .background-fixed – warstwa tła dynamicznego (zmieniana przez JS)
+  - .section-dark – ciemne, półprzezroczyste tło sekcji/kontenera
+  - .default-container – główny kontener sekcji
+  - .nav-main – główna nawigacja
+  - .default-btn – przycisk akcji
+  - .fade-in – animacja pojawiania się sekcji
+  - Bloki body.[nazwa-strony] ... – ustawienia przeźroczystości tła i kontenerów
+  Zmiana klas i sekcji wpływa na wygląd i czytelność treści.
+============================================================ -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dziękujemy – Alichja</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dziekuje-page">
+  <div id="bg1" class="background-fixed"></div>
+  <div id="bg2" class="background-fixed"></div>
+
+  <!-- === Główna treść strony === -->
+  <main class="fade-in">
+    <section class="section-dark">
+      <div class="default-container">
+        <h1 class="default-section-title">Dziękujemy za wiadomość!</h1>
+        <p class="intro">Twoja wiadomość została pomyślnie wysłana. Odezwiemy się do Ciebie możliwie jak najszybciej.</p>
+        <div class="cta-contact">
+          <a href="index.html" class="default-btn">Powrót na stronę główną</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
