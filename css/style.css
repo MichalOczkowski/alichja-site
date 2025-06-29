@@ -644,6 +644,6 @@ body.gallery-page .section-dark {
 
 @media (min-width: 768px) {
   .news-list {
-    grid-template-columns: 1fr 1fr;
+     grid-template-columns: 1fr 1fr;
   }
 }
