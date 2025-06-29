@@ -15,7 +15,7 @@
   - .regulations-section, .regulations-list – dedykowane style dla podstrony Regulaminu, Polityki Prywatności i RODO
   – Pływający pasek ikon sociali (z lewej strony)
     - .floating-social-bar – kontener z ikonami
-    - .floating-social-bar a – pojedyncze przyciski
+    - .floating-social-bar a – pojedyncze przyciski 
   Zmiana wartości w blokach body.[nazwa-strony] .background-fixed lub .section-dark
   wpływa na widoczność tła i czytelność treści na danej podstronie.
 ============================================================
