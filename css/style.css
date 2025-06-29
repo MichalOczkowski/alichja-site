@@ -13,7 +13,9 @@
   - .fade-in – animacja pojawiania się sekcji przy przewijaniu
   - Bloki body.[nazwa-strony] ... – ustawienia przeźroczystości tła i kontenerów dla każdej podstrony
   - .regulations-section, .regulations-list – dedykowane style dla podstrony Regulaminu, Polityki Prywatności i RODO
-
+  – Pływający pasek ikon sociali (z lewej strony)
+    - .floating-social-bar – kontener z ikonami
+    - .floating-social-bar a – pojedyncze przyciski
   Zmiana wartości w blokach body.[nazwa-strony] .background-fixed lub .section-dark
   wpływa na widoczność tła i czytelność treści na danej podstronie.
 ============================================================
@@ -645,5 +647,57 @@ body.gallery-page .section-dark {
 @media (min-width: 768px) {
   .news-list {
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+.floating-social-bar {
+  position: fixed;
+  top: 40%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: transparent;
+  z-index: 1000;
+  padding-left: 0.3rem;
+}
+
+.floating-social-bar a {
+  display: block;
+  background-color: rgba(30, 30, 30, 0.9);
+  color: #87CEEB;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.6rem;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.floating-social-bar a:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  .floating-social-bar {
+    flex-direction: row;
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.5rem 1rem;
+    background-color: rgba(0,0,0,0.8);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .floating-social-bar a {
+    border-radius: 50%;
+    padding: 0.6rem 0.6rem;
   }
 }
