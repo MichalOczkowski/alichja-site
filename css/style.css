@@ -12,6 +12,26 @@
   - .gallery-flex, .gallery-item, .gallery-thumbnail – układ i styl galerii zdjęć
   - .fade-in – animacja pojawiania się sekcji przy przewijaniu
   - Bloki body.[nazwa-strony] ... – ustawienia przeźroczystości tła i kontenerów dla każdej podstrony
+
+  Zmiana wartości w blokach body.[nazwa-strony] .background-fixed lub .section-dark
+  wpływa na widoczność tła i czytelność treści na danej podstronie.
+============================================================
+ */
+
+/*
+============================================================
+  style.css – główny arkusz stylów serwisu Alichja
+
+  Opis kluczowych klas i sekcji:
+  - .background-fixed – warstwa tła dynamicznego (zmieniana przez JS)
+  - .section-dark – ciemne, półprzezroczyste tło sekcji/kontenera (okno na treść)
+  - .default-container – główny kontener sekcji, ogranicza szerokość i dodaje padding
+  - .default-section-title, .default-page-title – standaryzowane tytuły sekcji i stron
+  - .nav-main – główna nawigacja (menu)
+  - .default-btn – przycisk akcji
+  - .gallery-flex, .gallery-item, .gallery-thumbnail – układ i styl galerii zdjęć
+  - .fade-in – animacja pojawiania się sekcji przy przewijaniu
+  - Bloki body.[nazwa-strony] ... – ustawienia przeźroczystości tła i kontenerów dla każdej podstrony
   - .regulations-section, .regulations-list – dedykowane style dla podstrony Regulaminu, Polityki Prywatności i RODO
   – Pływający pasek ikon sociali (z lewej strony)
     - .floating-social-bar – kontener z ikonami
@@ -90,25 +110,7 @@ body.Regulations-page .regulations-list div {
     bottom: 3vw;
   }
 }
-/*
-============================================================
-  style.css – główny arkusz stylów serwisu Alichja
 
-  Opis kluczowych klas i sekcji:
-  - .background-fixed – warstwa tła dynamicznego (zmieniana przez JS)
-  - .section-dark – ciemne, półprzezroczyste tło sekcji/kontenera (okno na treść)
-  - .default-container – główny kontener sekcji, ogranicza szerokość i dodaje padding
-  - .default-section-title, .default-page-title – standaryzowane tytuły sekcji i stron
-  - .nav-main – główna nawigacja (menu)
-  - .default-btn – przycisk akcji
-  - .gallery-flex, .gallery-item, .gallery-thumbnail – układ i styl galerii zdjęć
-  - .fade-in – animacja pojawiania się sekcji przy przewijaniu
-  - Bloki body.[nazwa-strony] ... – ustawienia przeźroczystości tła i kontenerów dla każdej podstrony
-
-  Zmiana wartości w blokach body.[nazwa-strony] .background-fixed lub .section-dark
-  wpływa na widoczność tła i czytelność treści na danej podstronie.
-============================================================
-*/
 /* === PRZEŹROCZYSTOŚĆ TŁA I KONTENERÓW DLA KAŻDEJ STRONY === */
 
 
