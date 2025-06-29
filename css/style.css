@@ -602,3 +602,48 @@ body:not(.gallery-page)::before {
 body.gallery-page .section-dark {
   background-color: rgba(0, 0, 0, 0.6);
 }
+
+/* === Sekcja: Newsy === */
+.news-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.news-entry {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.news-entry:hover {
+  transform: translateY(-5px);
+}
+
+.news-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #87CEEB;
+  margin-bottom: 0.5rem;
+}
+
+.news-date {
+  font-size: 0.85rem;
+  color: #bbb;
+  margin-bottom: 1rem;
+}
+
+.news-description {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .news-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
